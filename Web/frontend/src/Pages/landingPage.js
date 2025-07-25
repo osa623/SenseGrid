@@ -57,7 +57,7 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 
 import '../Components/Swiper.css';
-import { FaArrowAltCircleDown, FaArrowAltCircleUp, FaArrowCircleUp, FaArrowUp } from 'react-icons/fa';
+import { FaArrowAltCircleDown, FaArrowAltCircleUp, FaArrowCircleUp, FaArrowUp, FaWhatsapp } from 'react-icons/fa';
 
 
 
@@ -118,136 +118,6 @@ const partners = [
     },
 ];
 
-const blog = [
-    {
-      id: 1,
-      title: 'WiFi AP vs. STA Mode in IoT devices.',
-      subtitle: 'Which One is Right for Your Project?',
-      introduction: [
-        'Typically, IoT devices can run on two modes as AP (Access Point) and STA(Station). Station Mode (STA) is the standard mode for most WiFi devices. In this mode, a device connects to an existing network, much like your smartphone does when it connects to your home WiFi. In this scenario, your phone is functioning in Station Mode.',
-        'In contrast, Access Point Mode (AP) transforms the device into an access point. Instead of joining a network, the device creates its own network, allowing other devices to connect directly to it. '
-      ],
-      image: blog01,
-      profileimage : portfolio1,
-      authorName : 'Nishan Dananjaya',
-      authorTitle : 'Associate Embedded Engineer',
-      date: 'January 28, 2025',
-      topic1:'Why AP mode, what are the use cases? ',
-      subimage01: subimage01,
-      subtopic1: 'Why Use AP Mode?',
-      subdescription1: 'AP mode offers numerous advantages for IoT devices, enabling them to create independent networks that facilitate seamless connectivity for other devices. Additionally, IoT devices can function as central hubs, managing connections for multiple wireless clients. AP mode seamlessly integrates with both wired and wireless networks, enhancing flexibility in various deployment scenarios',
-      subtopic12: 'Use Cases',
-      subdescription12: [
-        'Smart Home Systems: AP mode is ideal for connecting multiple IoT devices within a smart home, ensuring reliable and efficient communication between devices. ',
-        'Industrial IoT Gateways: In industrial environments, AP mode enables a gateway to collect and manage data from multiple connected devices, improving operational efficiency. ',
-        'Remote Monitoring Systems: For applications such as agriculture or wildlife monitoring, AP mode allows multiple sensors to connect to a centralized device, providing real-time data collection and analysis. '
-      ],
-        topic2: "Why STA mode, what are the use cases?",
-        subimage02: subimage02,
-        subtopic21: "Why Use STA Mode?",
-        subdescription21: "STA mode allows IoT devices to connect to existing Wi-Fi networks, providing seamless integration into established network infrastructures. This mode enables key functionalities such as cloud-based data storage, firmware updates, and remote access. Additionally, STA mode is more power-efficient than AP mode, making it ideal for battery-operated devices.",
-        subtopic22 : "Use Cases",
-        subdescription22 : [
-            "Smart Appliances: Home devices like smart refrigerators, thermostats, and lighting systems use STA mode to connect to the home Wi-Fi network, allowing users to control them remotely via smartphones or voice assistants.",
-            "Wearable Technology: Devices such as smartwatches and fitness trackers operate in STA mode to sync data with smartphones or cloud services, providing users with real-time health and activity information.",
-            "Industrial Automation: In industrial settings, sensors and machinery equipped with IoT capabilities connect in STA mode to the facility's Wi-Fi network, enabling centralized monitoring, data collection, and process optimization."
-      ],
-      topic3: "How to select the AP or STA mode for your project?",
-      subimage03: subimage03,
-        subdescription31:  "When selecting between AP and STA modes, several factors should be considered to ensure optimal performance and integration.",
-        subdescription32 : [
-            "Network Infrastructure plays a key role in this decision. If an existing Wi-Fi network is available, STA mode allows devices to seamlessly integrate into the current setup without the need to create a separate network. Conversely, if the device needs to operate independently or in an environment without existing Wi-Fi, AP mode enables it to establish its own network for direct connections.",
-            "Device Roles and Communication are also critical. Devices designed to act as central hubs, managing multiple client devices like smart home controllers, are best suited for AP mode. In contrast, devices that need to send data to a central server or the cloud benefit from STA mode, leveraging the existing network for connectivity.",
-            "Power Consumption is another consideration, as STA mode is generally more energyefficient, making it ideal for battery-powered devices due to its reduced connection management overhead.",
-            "Security Considerations must also be evaluated; AP mode can enhance security by creating a dedicated network that isolates traffic, while STA mode relies on the security protocols of the existing network, which may simplify management but requires trust in the network's safeguards",
-            "Lastly, Scalability is important for deployment. AP mode is well-suited for scenarios involving a limited number of devices connecting directly to a central device. For largescale deployments, STA mode is preferable, as it allows devices to utilize a robust existing network infrastructure, accommodating numerous devices without requiring each one to manage its own network."
-    ],
-        topic4: "Conclusion",
-        subimage04: "",
-        subtopic41: " ",
-        subdescription41: "Choosing between AP and STA modes for your IoT project depends on the specific requirements of your application. AP mode is ideal for scenarios where the device needs to create its own network, act as a central hub, or operate in environments without existing infrastructure. On the other hand, STA mode is better suited for devices that need to connect to an existing network, prioritize power efficiency, or integrate seamlessly into large-scale deployments. By carefully evaluating factors such as network infrastructure, device roles, power consumption, security, and scalability, you can determine which mode best aligns with your project's goals. Both modes have their unique advantages, and the right choice will ensure optimal performance and functionality for your IoT solution.",
-        subtopic42 : " ",
-        subdescription42 : [],
-
-        topic5: "",
-        subimage05: "",
-        subtopic51: "",
-        subdescription51: "",
-        subtopic52 : "",
-        subdescription52 : [],
-
-        topic6: "",
-        subimage06: "",
-        subtopic61: "",
-        subdescription61: "",
-        subtopic62 : "",
-        subdescription62 : [],
-
-        },
-    {
-        id: 2,
-        title: 'ESP32 FOTA Using GitHub  Repositories',
-        subtitle: 'Simplifying OTA Updates with GitHub',
-        introduction: [],
-        image: blog02,
-        profileimage : portfolio2,
-        authorName : 'Madeehsa Lakshan',
-        authorTitle : 'Associate Embedded Engineer',
-        date: 'January 25, 2025',
-        topic1:'Introduction',
-      subimage01: 'blog02',
-      subtopic1: '',
-      subdescription1: 'Firmware Over-The-Air (FOTA) is one of the most important features of IoT devices, which allows users to upgrade firmware without physical access to the devices. This FOTA update mechanism allows a device to update itself based on data received while the normal firmware is running. This blog post will discuss the implementation of FOTA updates for ESP32 using a GitHub (private or public) repository (SSL).',
-      subtopic12: '',
-      subdescription12: [],
-        topic2: "How it works",
-        subimage02: blog2chart,
-        subtopic21: "",
-        subdescription21: "ESP32 connects to the internet and establishes a secure connection with the GitHub server. Then ESP periodically checks with the saved version file and compares with the current version. If a new version is detected, end devices download the firmware binary file to a different partition and perform an OTA update.",
-        subtopic22 : "",
-        subdescription22 : [],
-        topic3: "Use Case:  ESP32 FOTA update using GitHub private repositories",
-        subimage03: blog2chart2,
-        subdescription31:  "",
-        subdescription32 : [],
-    topic4: "Key Components and Architecture",
-    subimage04: "",
-    subtopic41: "Firmware Version Management",
-    subdescription41: "",
-    subtopic42 : "A JSON file on GitHub stores the current firmware version and download URL",
-    subdescription42 : [
-        "A JSON file on GitHub stores the current firmware version and download URL",
-        "The ESP32 compares its current version with the server-side version",
-        "If a new version is detected, it initiates the download and update process"       
-   ],
-   topic5: "",
-   subimage05: "",
-   subtopic51: "Secure Connectivity",
-   subdescription51: "",
-   subtopic52 : "Security is paramount in this implementation",
-   subdescription52 : [
-
-    "Uses WiFiClientSecure for encrypted connections",
-    "Supports loading custom Root CA certificates",
-    "Authenticates GitHub API requests using Personal Access Tokens (PAT)",
-    "Stores WiFi credentials securely in LittleFS"
-           
-  ],
-
-  topic6: "",
-  subimage06: "",
-  subtopic61: "Rollback Mechanism",
-  subdescription61: "",
-  subtopic62 : "An innovative feature allows hardware-triggered firmware rollback",
-  subdescription62 : [
-    "A dedicated pin can trigger a return to the previous firmware version",
-    "Provides a safety net if a new firmware update causes unexpected issues"
-          
- ],
-
-  
-      },
-];
 
 const testimonial = [
     {
@@ -492,6 +362,11 @@ const LandingPage = ({darkMode}) => {
 
 
                     </section>
+
+                    {/* WhatsApp Icon */}
+                    <div className='fixed bottom-0 right-0 bg-green-600 z-50 w-12 h-12 rounded-full flex items-center justify-center m-4'>
+                    <FaWhatsapp className='text-white text-2xl cursor-pointer' onClick={() => window.open('https://wa.me/94777777777', '_blank')} />
+                    </div>
 
                     {/* Submit Section */}
                     <div className={`relative flex  justify-center ${darkMode ? 'flex bg-darkTheme' : ''} items-center bg-transparent`}>
